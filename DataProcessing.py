@@ -52,6 +52,8 @@ class Dataloding:
         self.credits_df = self.transform_credits_df(self.credits_df)
         logger.info("successfully loaded credits data. entries: %s" \
             % self.credits_df.shape[0])
+        
+        logger.info("successfully loaded all data")
 
     def transform_movies_df(self, movies_df) -> pd.DataFrame:
         """Converts non strings like jsons or other data types to string or list.
@@ -143,8 +145,6 @@ class DataProcessing:
 
     def __init__(self) -> None:
         pass
-
-    
 
 if __name__ == '__main__':
     data = Dataloding()
